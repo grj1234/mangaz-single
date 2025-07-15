@@ -2,6 +2,12 @@ MIT License
 
 Copyright (c) 2024 John
 
+Modified by grj1234, modified portions are:
+* The log message
+* Save only one book specified as argument, instead of trying to scrape all the books
+* Single-thread main routine instead of multi-thread one (image processing routine is still multi-thread)
+* Save image files as PNG instead of JPG (to avoid degradation of image quality)
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights

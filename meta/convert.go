@@ -5,6 +5,7 @@ import (
 	"image"
 	"image/draw"
 	"image/jpeg"
+	"image/png"
 )
 
 func (order Order) Convert(source []byte) ([]byte, error) {
@@ -29,7 +30,7 @@ func (order Order) Convert(source []byte) ([]byte, error) {
 	}
 	var writer bytes.Buffer
 
-	err = jpeg.Encode(&writer, canvas, nil)
+	err = png.Encode(&writer, canvas)
 	if err != nil {
 		return nil, err
 	}

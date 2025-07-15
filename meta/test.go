@@ -29,7 +29,7 @@ func test0() {
 		log.Println("err: ", err)
 	}
 	os.WriteFile("./input.jpg", imgRaw, 0644)
-	os.WriteFile("./output.jpg", convertedImg, 0644)
+	os.WriteFile("./output.png", convertedImg, 0644)
 	f, _ := os.Create("./data.json")
 	json.NewEncoder(f).Encode(data)
 }
@@ -46,7 +46,7 @@ func test1() {
 		if len(order.ImgRaw) == 0 {
 			continue
 		}
-		fName := fmt.Sprintf("./test/%d.jpg", i)
+		fName := fmt.Sprintf("./test/%d.png", i)
 		os.WriteFile(fName, order.ImgRaw, 0644)
 	}
 	f, _ := os.Create("./data.json")
